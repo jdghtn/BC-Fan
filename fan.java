@@ -25,7 +25,7 @@ import java.time.LocalDate;
         return today.getMonthValue() == 12 && today.getDayOfMonth() == 25;
     }
     
-    // increase the speed (speeds range from 0 - 4)
+    // increase the speed (speeds range from 0 - 3)
     public void increaseSpeed() {
         if (!isChristmas()) {
             fanSpeed = (fanSpeed + 1) % 4;
@@ -49,7 +49,7 @@ import java.time.LocalDate;
     public static void main(String[] args) {
         Fan fan = new Fan();
         
-        // Christmas test
+        // tests
         if (fan.isChristmas()) {
             System.out.println("It's Christmas - the fan is off");
 
@@ -95,7 +95,6 @@ import java.time.LocalDate;
             fan.changeDirection();
             System.out.println(fan);
             // output: 1, clockwise
-
         }
     }
 }
